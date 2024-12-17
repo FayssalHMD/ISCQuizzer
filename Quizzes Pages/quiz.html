@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz :</title>
+    <link rel="stylesheet" href="/Quizzes Pages CSS/quiz.css">
+
+
+    <!-- Font-Family: Cairo -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f618568b8f.js" crossorigin="anonymous"></script>
+
+<link rel="icon" href="../Images/Logo-Tab.png" type="image/x"> 
+
+
+
+</head>
+<body>
+    <div id="quiz-game-container">
+
+        <h2 id = "quiz-name"></h2>
+        <div id="quiz-container"></div>
+    </div>
+
+
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const quizId = urlParams.get('id');
+    </script>
+
+<script type="module" src="../Quizzes Pages Functions/quiz.js"></script>
+
+
+</body>
+</html>

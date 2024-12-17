@@ -1,0 +1,198 @@
+html{
+    font-size: 10px;
+    font-family:'cairo';
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+}
+
+.container{
+    background-color: white;
+    height: 70vh;
+    border:2px solid #3d8eaac5;
+    border-radius: 25px;
+    width: 50%;
+    display: flex;
+    padding-bottom:15vh;
+    flex-direction: column;
+    margin:auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h2{
+    margin-top:5rem;
+    font-size: 24px;
+    position: relative;
+
+}
+
+.container h2::before{
+    content:'';
+    position: absolute;
+    left:1vw;
+    bottom: -6px;
+    background-color: #3d8eaac5;
+    height: 2px;
+    width: 85%;
+}
+
+.container .score-display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top:0px;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.container .score-display h3{
+    margin-top:0px;
+    color:black;
+}
+
+.container .score-display #text{
+    margin-top:0px;
+    background-color: #3d8eaac5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    padding: 20px 22px;
+
+}
+
+.container .score-display p{
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+}
+
+.container .buttons-end a{
+    margin-top:2rem;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    gap: 2.3rem;
+}
+
+.container .buttons-end button{
+    padding: 10px 20px;
+    border-radius: 14px;
+    border: 3px solid;
+    background-color: #3d8eaac5;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition:0.2s;
+}
+
+.container .buttons-end button:hover{
+    background-color: hsla(195, 47%, 35%, 0.773);
+}
+
+.container .follow-us{
+    display: flex;
+    margin-top:2rem;
+    flex-direction: column;
+    gap: 0.4rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container .follow-us h3{
+    font-size: 20px;
+    position: relative;
+    margin-bottom:0px;
+}
+
+.container .follow-us h3::before{
+    content:'';
+    position: absolute;
+    left:1vw;
+    bottom: -6px;
+    background-color: #3d8eaac5;
+    height: 2px;
+    width: 85%;
+}
+
+.container .follow-us .icons{
+    padding: 0px;
+    margin-top:0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.container .follow-us .icons a{
+    background: #3d8eaac5;
+    padding: 18px 20px;
+    text-decoration: none;
+    border-radius: 50%;
+    transition:0.4s;
+    position: relative;
+}
+
+#instagram::before{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    border-radius: 50%;
+    right:0;
+    opacity: 0;
+    background:linear-gradient(#f9ce34, #ee2a7b, #6228d7);
+    transition: opacity .4s;
+}
+
+#instagram:hover::before{
+    opacity: 1;
+}
+
+#facebook:hover{
+    background-color: #316FF6;
+}
+
+#linkedin:hover{
+    background-color: #0077b5;
+}
+
+.container .follow-us .icons a i{
+    color: white;
+    font-size: 18px;
+    position: relative;
+    font-weight: 500;
+}
+
+
+
+@media(min-width:765px){
+    .container h2{
+        font-size: 33px;
+    }
+
+    .container .score-display h3{
+        font-size:27px;
+    }
+
+    .container .follow-us{
+        margin-top:0px;
+    }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISC-Quizzer : Home </title>
+    <link rel="icon" href="../Images/Logo-Tab.png" type="image/x"> 
+<!-- Font-Family: Cairo -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f618568b8f.js" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="../Main Pages CSS/login.css">
+<link rel="stylesheet" href="../Main Pages CSS/quizContainer.css">
+<link rel="stylesheet" href="../Main Pages CSS/highscores.css">
+
+</head>
+<body>
+
+    <a href="#" class="to-top-button">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <div id="head-container">
+        <header class="head">
+            <div class="logo">
+                <img src="../Images/logo.png" alt="">
+                <a href="#"><h2>ISC-Quizzer</h2></a>
+            </div>
+
+            <nav class="navigation">
+                <ul id="navigation-list">
+                    <li><a href="../Main Pages/login.html">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contacts</a></li>
+                    <li><a href="#" id="button-to-remove">Login</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav_phone">
+              <div id="menu-button"><i class="fa-solid fa-bars"></i></div> 
+              <div id="pop-up-nav">
+                    <ul class="menu-links">
+                        <li><a href="../Main Pages/login.html">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contacts</a></li>
+                        <li><a href="#" id="button-to-remove-phone">Login</a></li>
+                    </ul>
+                </div> 
+            </div>
+        </header>
+    </div>
+
+    <main class="main">
+        <section class="welcome">
+            <div class="Login">
+
+                    <h1>Login</h1>
+                    <form id="admin-login-form">
+                        <div class="text_field">
+                            <input name="email" type="email" id="email-input" required>
+                            <span></span>
+                            <label>Email</label>
+                        </div>
+                        <div class="text_field">
+                            <input name="password" type="password" id="password-input" required>
+                            <span></span>
+                            <label>Password</label>
+                        </div>
+                        <div class="problem">Connexion Problem?<a href="#">Contact Us</a></div>
+                        <button type="submit" id="submit-button-login">Sign In</button>
+                    </form>
+            
+            </div>
+
+            <div id="information-before-login">
+                <div class="impo-title">
+                    <h2>Welcome !</h2>
+                    <hr>
+                </div>
+                <p>&#9830; Welcome to our platform! This login form is exclusively for administrators. If you are an admin, please enter your credentials to access the admin features. For security reasons, only authorized personnel should proceed beyond this point. If you're here to participate in our quizzes, you're in the right place! <span id="scroll-down" style="font-weight: bold; text-decoration: underline; cursor: pointer;">
+                    Scroll down</span> to explore and join the exciting quizzes available. Have fun testing your knowledge !
+                </p>
+            </div>
+        </section>
+
+
+        <section id="quizzes-display">
+            <h2 id="available-quizzes">Available Quizzes :</h2>
+            <div id="big-container">
+            </div>
+        </section>
+
+
+        <section id="display-highscores">
+            <h2>High Scores :</h2>
+            <div id="highscores-quizzes">
+
+            </div>
+        </section>
+    </main>
+    <br>
+
+    <script type="module" src="../Main Pages Functions/login.js"></script>
+    <script type="module" src="../DataCenter/firebase.js"></script>
+</body>
+</html>

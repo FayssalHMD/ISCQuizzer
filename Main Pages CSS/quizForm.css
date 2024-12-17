@@ -1,0 +1,195 @@
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'cairo', sans-serif;
+}
+
+body{
+    background: linear-gradient(to right,#245eca61,white);
+}
+
+.all-forms-container{
+    position: relative;
+    width: 100%;
+    min-height:100vh;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+#drop-area{
+    position: relative;
+    width: 500px;
+    height:350px;
+    padding: 30px;
+    background:#fff;
+    text-align: center;
+    border-radius: 20px;
+}
+
+#img-view{
+    width:100%;
+    height: 90%;
+    border-radius:20px;
+    border:2px dashed #2D6EE7;
+    background: #f7f8ff;
+    background-position: center;
+    background-size: cover;
+}
+
+#img-view #myimg{
+    width: 100px;
+    margin-top:25px;
+}
+
+#img-view span{
+    display:block;
+    font-size: 12px;
+    color: #777;
+    margin-top:15px;
+}
+
+
+/* Information of the Quiz : Begin Styling */
+#quiz-info-form-container,#questions-info-form-container{
+    border: 1.4px solid #777;
+    position: relative;
+    width: 70vw;
+    height:80vh;
+    padding: 30px;
+    background:#fff;
+    text-align: center;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap:4vh;
+}
+
+#quiz-info-form-container h2,#questions-info-form-container h2{
+    position: relative;
+    margin-top:0vh;
+    align-self:center;
+    margin-bottom:3vh;
+}
+
+#quiz-info-form-container h2::before , #questions-info-form-container h2::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom:0;
+    width: 70%;
+    height: 2px; 
+    background-color: black; 
+}
+
+
+
+
+#toTheInfo,#toTheQuestions,#next-question{
+    color: #fff;
+    background-color: hsl(225, 100%, 85%);
+    position: absolute;
+    right: 23px;
+    bottom: 10px;
+    padding: 6px 14px;
+    display: flex;
+    text-align: center;
+    gap:5px;
+    align-items: center;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+#toTheInfo i,#toTheQuestions i{
+    font-size: 12px;
+}
+
+#toTheInfo:not([disabled]):hover,#toTheQuestions:not([disabled]):hover,#next-question:not([disabled]):hover{
+    cursor: pointer;
+    background-color: hsl(225, 100%, 75%)
+}
+
+
+#quiz-info-field,#question-fields{
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:0.5rem;
+    flex-wrap: wrap;
+}
+
+#quiz-info-field label,#question-fields label{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#quiz-info-field input,#question-fields input{
+    padding: 4px 5px;
+    font-size: 14px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#questionNumber{
+    padding:2px;
+    width: 4vw;
+    text-align: center;
+}
+
+#quizDescription {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    overflow: hidden;
+    box-sizing: border-box; 
+}
+
+#next-question{
+    position: absolute;
+    right: 90px;
+    bottom: 14%;
+}
+
+@media(min-width:720px){
+    #quiz-info-form-container,#questions-info-form-container {
+        width: 50vw;
+        height:80vh;
+    }
+
+    #quiz-info-form-container,#questions-info-form-container h2{
+        align-self:center;
+        margin-top:-8vh;
+    }
+
+    #next-question{
+        position: absolute;
+        right: 27%;
+        bottom: 12%;
+    }
+
+    
+#quiz-info-form-container h2,#questions-info-form-container h2{
+    position: relative;
+    margin-top:0vh;
+    align-self:center;
+    margin-bottom:3vh;
+}
+}
+/* Information of the Quiz : End Styling */
+

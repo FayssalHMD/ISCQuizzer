@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISC-Quizzer : Home </title>
+    <link rel="stylesheet" href="../Main Pages CSS/post_login.css">
+    <link rel="stylesheet" href="../Main Pages CSS/login.css">
+    <link rel="stylesheet" href="../Main Pages CSS/quizContainer.css">
+<!-- Font-Family: Cairo -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f618568b8f.js" crossorigin="anonymous"></script>
+<link rel="icon" href="../Images/Logo-Tab.png" type="image/x"> 
+
+
+</head>
+<body>
+
+    <a href="#" class="to-top-button">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+
+    <div id="head-container">
+        <header class="head">
+            <div class="logo">
+                <img src="../Images/logo.png" alt="">
+                <a href="#"><h2>ISC-Quizzer</h2></a>
+            </div>
+
+            <nav class="navigation">
+                <ul id="navigation-bar">
+                    <li><a href="../Main Pages/login.html">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contacts</a></li>
+                    <li><form role = "search">
+                        <button type="submit" id="signOutButton">Logout</button>
+                      </form></li>
+
+                </ul>
+            </nav>
+
+            <div class="nav_phone">
+                <div id="menu-button"><i class="fa-solid fa-bars"></i></div> 
+                <div id="pop-up-nav">
+                      <ul class="menu-links">
+                          <li><a href="../Main Pages/login.html">Home</a></li>
+                          <li><a href="#">About Us</a></li>
+                          <li><a href="#">Contacts</a></li>
+                          <li><form role = "search">
+                            <button type="submit" id="signOutButtonPhone">Logout</button>
+                          </form></li>
+                      </ul>
+                  </div> 
+              </div>
+        </header>
+    </div>
+
+    <main class="main">
+       
+        <section id="quizzes-display">
+            <h2>Add / Remove a Quiz :</h2>
+            <div id="big-container">
+                <div class="quiz-container">
+                    <img id="addQuiz-image" src="../Images/PlusSign.png" alt="">
+                    <div class="info">
+                        <h3 class="quiz-title">New Quiz</h3>
+                        <p class="quiz-description">Press the button below to start creating the new Quiz.</p>
+                    </div>
+                    <button class="addQuiz-button" id="add-quiz-button">Add Quiz</button>
+                </div>
+                
+            </div>
+        </section>
+
+
+        <section id="add-admin-form">
+            <h2 id="admin-creation-title">Create an admin account:</h2>
+            <div class="admin-form">
+                <div id="text-add-admin-form">
+                    <div id="note-title">
+                        <h3>Important Information :</h3>
+                        <hr>
+                    </div>
+                    <p>This page is reserved for the admins of the ISC quizer website. <br>
+                    Fill this form to add new admins, or remove existing ones. <br>
+                    The login process will still be done in the home page of the website.</p>
+                </div>
+                <div id="signUp">
+                    <h1>Create the new User :</h1>
+                    <form id="admin-signUp-form">
+                        <div class="text_field">
+                            <input type="text" name="firstName" id="first-name-input" required>
+                            <span></span>
+                            <label>First name :</label>
+                        </div>
+
+                        <div class="text_field">
+                            <input type="text" name="lastName" id="last-name-input" required>
+                            <span></span>
+                            <label>Last name :</label>
+
+                        </div>
+
+                        <div class="text_field">
+                            <input type="email" name="email" id="email-input" required>
+                            <span></span>
+                            <label>Email :</label>
+                        </div> 
+                        
+                        <div class="text_field">
+                            <input type="password" name="password" id="password-input" required>
+                            <span></span>
+                            <label>Password :</label>
+                        </div>
+
+                        <button type="submit" id = "submit-button-signUp">Add new Admin</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <br><br>
+
+
+        
+    </main>
+
+    <script  type="module" src="../Main Pages Functions/post_login.js"></script>
+    <script type="module" src="../DataCenter/firebase.js"></script>
+
+
+    <!-- Additional Java Script -->
+    <script>
+        document.getElementById("add-quiz-button").addEventListener("click", () => {
+            window.location.href = "quizForm.html";
+        })
+    </script>  
+
+    <script>
+        let UserCreds = JSON.parse(localStorage.getItem("admin-creds"));
+        let UserInfo = JSON.parse(localStorage.getItem("admin-info"));
+
+        let signOutBtn = document.getElementById("signOutButton");
+        let signOutBtnPhone = document.getElementById("signOutButtonPhone");
+
+        let signout = () => {
+            localStorage.removeItem("admin-creds");
+            localStorage.removeItem("admin-info");
+
+            window.location.href = "login.html";
+        }
+
+        let checkCrede = () => {
+            if(!localStorage.getItem("admin-creds")){
+                window.location.href = "login.html";
+            }
+        }
+        window.addEventListener("load",checkCrede);
+        signOutBtn.addEventListener("click",signout);
+        signOutBtnPhone.addEventListener("click",signout);
+    </script>
+</body>
+</html>

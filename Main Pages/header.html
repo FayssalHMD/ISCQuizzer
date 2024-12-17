@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-Header</title>
+    <link rel="stylesheet" href="/Main Pages CSS/header.css">
+    <script src="https://kit.fontawesome.com/f618568b8f.js" crossorigin="anonymous"></script>
+    <!-- Cairo Font Family  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <!-- End Cairo Font Family -->
+</head>
+<body>
+
+
+    <div id="head-container">
+        <header class="head">
+            <div class="logo">
+                <img src="/Images/logo.png" alt="">
+                <a href="#"><h2>ISC-Quizzer</h2></a>
+            </div>
+
+            <nav class="navigation">
+                <ul id="navigation-bar">
+                    <li><a href="/post_login">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contacts</a></li>
+                    <div id="profil-button"><li class="profile"><a href="#" id="profil-link"><i class="fa-solid fa-user"></i></a></li></div>
+                    <div id="profil-options">
+                        <ul id="profil-options-bar">
+                            <li><a href="#">Profil</a></li>
+                            <li><a href="#" id="logout">Logout</a></li>
+                        </ul>
+                    </div>  
+                </ul>
+            </nav>
+
+            <div class="nav_phone">
+                <div id="menu-button"><i class="fa-solid fa-bars"></i></div> 
+                <div id="pop-up-nav">
+                      <ul class="menu-links">
+                          <li><a href="/post_login">Home</a></li>
+                          <li><a href="">About Us</a></li>
+                          <li><a href="contact.html">Contacts</a></li>
+                          <li><a href="">Profil</a></li>
+                          <li><a href="">Logout</a></li>
+                      </ul>
+                  </div> 
+              </div>
+        </header>
+    </div>
+
+
+    <script>
+//Nav-links Buttons Appear :
+
+const menuButton = document.getElementById('menu-button');
+const popupNav = document.getElementById('pop-up-nav');
+
+menuButton.addEventListener('click', () => {
+  popupNav.classList.toggle('activeBar');
+});
+
+
+//Profil Button Clicked
+const profilButton = document.getElementById('profil-button');
+const profilNav = document.getElementById('profil-options');
+
+profilButton.addEventListener('click', () => {
+  profilNav.classList.toggle('active');
+});
+    </script>
+
+</body>
+</html>

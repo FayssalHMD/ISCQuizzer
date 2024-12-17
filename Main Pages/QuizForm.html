@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Quiz</title>
+    <link rel="stylesheet" href="../Main Pages CSS/quizForm.css">
+    <!-- Font-Family: Cairo -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f618568b8f.js" crossorigin="anonymous"></script>
+<link rel="icon" href="../Images/Logo-Tab.png" type="image/x"> 
+
+
+</head>
+<body>
+
+    <div class="all-forms-container">
+        
+        <label for="input-file" id="drop-area" style="display:block;">
+            <input type="file" accept="image/*" id="input-file" hidden>
+            <!-- Hidden Inputs for the Image name (Firebase Storage) -->
+            
+            <input type="text" id="namebox" hidden>
+            <label id="extlab" hidden></label>
+
+            <!-- Back to Original code -->
+            <div id="img-view">
+                <img src="../Images/508-icon.png" id="myimg">
+                <p>Drag and drop or click here <br> to upload the image</p>
+                <span>Upload any images from desktop</span>
+                <button id="toTheInfo"><p>Next</p><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </label>
+
+
+        <form id="quiz-info-form" style="display:none;">
+            <div id="quiz-info-form-container">
+                <h2>Enter Quiz Details :</h2>
+                <div id="quiz-info-field">
+                    <label>&#x2BC1; Quiz Name :</label>
+                    <input type="text" id="quizName" name="quizName" placeholder="Web Development" required>
+                </div>
+
+                <div id="quiz-info-field">
+                    <label>&#x2BC1; Quiz Description :</label>
+                    <textarea name="quizDescription" id="quizDescription" placeholder="Test your knowledge in the field of Web-Development with..." required
+                    style="resize:none; overflow: hidden;"></textarea>
+                </div>
+
+                <div id="quiz-info-field" id="number-info-field">
+                    <label>&#x2BC1; Number of Questions :</label>
+                    <input type="number" id="questionNumber" name="questionNumber" value="1" min="1" required>
+                </div>
+
+                <button type="submit" id="toTheQuestions"><p>Next</p><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </form>
+
+
+
+
+        <form id="quiz-quiestions-info" style="display:none;" >
+            <div id="questions-info-form-container">
+                <h2>Enter Questions Details :</h2>
+                <div id="question-fields">
+                    <label id="current-question-number">Question n°<span id="question-number-text"></span>:</label>
+                    <input type="text" id="qustion-text" name="questionText" required>
+                </div>
+
+                <div id="question-fields">
+                    <label id="current-question-choice">Choice A:</label>
+                    <input type="text" id="qustion-choice" name="questionChoiceA" required>
+                </div>
+
+                <div id="question-fields">
+                    <label id="current-question-choice">Choice B:</label>
+                    <input type="text" id="qustion-choice" name="questionChoiceB" required>
+                </div>
+                
+                <div id="question-fields">
+                    <label id="current-question-choice">Choice C:</label>
+                    <input type="text" id="qustion-choice" name="questionChoiceC" required>
+                </div>
+                
+                <div id="question-fields">
+                    <label id="current-question-choice">Choice D:</label>
+                    <input type="text" id="qustion-choice" name="questionChoiceD" required>
+                </div>
+
+                <div id="select-container">
+                    <label id="correct-choice">Correct Answer :</label>
+                    <select name="correctChoice" id="correct-choice">
+                        <option value="" disabled>Select An Option</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" id="next-question">Next</button>
+        </form>
+    </div>
+
+
+    <script type="module" src="../DataCenter/firebase.js"></script>
+    <script type="module" src="../Main Pages Functions/quizForm.js"></script>
+
+</body>
+</html>
