@@ -141,7 +141,7 @@ snapshot.forEach(async (doc) => {
       userInfoData.workshop = data.quizName;
       await setDoc(newUserRef, userInfoData);
 
-       window.location.href = `../Quizzes Pages/quiz.html?id=${doc.id}&userId=${newUserRef.id}`;
+       window.location.href = `../QuizzesPages/quiz.html?id=${doc.id}&userId=${newUserRef.id}`;
 
      } 
     })
