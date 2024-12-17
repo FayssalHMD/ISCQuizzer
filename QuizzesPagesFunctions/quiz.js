@@ -119,7 +119,7 @@ async function renderQuestion() {
   } else {
 
     localStorage.setItem("quizScore", userScore);
-    const endQuizUrl = `/Quizzes%20Pages/endQuiz.html?id=${quizId}&userId=${userId}`;
+    const endQuizUrl = `/QuizzesPages/endQuiz.html?id=${quizId}&userId=${userId}`;
     window.location.href = endQuizUrl;
   }
 }
