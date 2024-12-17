@@ -177,7 +177,7 @@ questionsForm.addEventListener("submit" ,(e) => {
                        document.body.appendChild(waitPage);
 
                        setTimeout(() => {
-                           window.location.href = "/Main Pages/post_login.html";
+                           window.location.href = "/MainPages/post_login.html";
 
                        },2000);
 
